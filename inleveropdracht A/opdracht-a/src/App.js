@@ -1,9 +1,8 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
 
-import Form from './components/Formulier';
-import Home from './components/Home';
-
+import Home from './routes/Home';
+import Persoon from './routes/Persoon';
  
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
       </nav>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="user/Form" element={<Form />} />
+        <Route path="user/Form" element={<Persoon />} />
       </Routes>
       </BrowserRouter>
     </div>  

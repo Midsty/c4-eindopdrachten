@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Table from 'react-bootstrap/Table';
 
 export default function Formulier() {
     return (
@@ -36,28 +34,10 @@ export default function Formulier() {
         </label>
         </form>
         </div>
+        
     )
 }
-   function BasicExample() {
-        return (
-            <div>
-                <Table striped bordered hover>
-                <thead>
-                <tr>
-                <th>#</th>
-                 <th>First Name</th>
-                 <th>Last Name</th>
-                 <th>Username</th>
-                  </tr>
-            </thead>
-         </Table>
-        </div>
-        );
-    }
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Formulier />);
 
 
 
