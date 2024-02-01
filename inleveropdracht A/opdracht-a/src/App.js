@@ -11,14 +11,12 @@ function App() {
 
       <BrowserRouter>
         <nav>
-          <ul>
             <li>
               <Link to="user/form">Inleveropdracht A </Link>
             </li>
             <li>
               <Link to="/">Inleveropdracht B</Link>
             </li>
-          </ul>
         </nav>
         <Routes>
           <Route index element={<Home />} />

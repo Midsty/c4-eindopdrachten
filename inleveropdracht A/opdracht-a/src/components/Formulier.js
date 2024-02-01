@@ -1,45 +1,91 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { FormContext } from "../routes/Persoon";
 
 export default function Formulier(props) {
+  const { data, setData } = useContext(FormContext);
+
   return (
     <div>
-      <h1>Dit is de form { props.name }</h1>
-      <form>
+      <h1>Inleveropdracht {props.name}</h1>
+      <form>      
+        {/* dit is het formulier */}
         <label>
           Voornaam:
-          <input type="text" />
+          <input
+            type="text"
+            value={data.first}
+            onChange={(e) => {
+              setData({ ...data, first: e.target.value });
+            }}
+          />
         </label>
         <br></br>
         <label>
           Achternaam:
-          <input type="text" />
+          <input
+            type="text"
+            value={data.last}
+            onChange={(e) => {
+              setData({ ...data, last: e.target.value });
+            }}
+          />
         </label>
         <br></br>
         <label>
           Adres:
-          <input type="text" />
+          <input
+            type="text"
+            value={data.address}
+            onChange={(e) => {
+              setData({ ...data, address: e.target.value });
+            }}
+          />
         </label>
         <br></br>
         <label>
           Huisnummer:
-          <input type="numbers" />
+          <input
+            type="text"
+            value={data.housenumber}
+            onChange={(e) => {
+              setData({ ...data, housenumber: e.target.value });
+            }}
+          />
         </label>
         <br></br>
         <label>
           Postcode:
-          <input type="text" />
+          <input
+            type="text"
+            value={data.zipcode}
+            onChange={(e) => {
+              setData({ ...data, zipcode: e.target.value });
+            }}
+          />
         </label>
         <br></br>
         <label>
           Woonplaats:
-          <input type="text" />
+          <input
+            type="text"
+            value={data.place}
+            onChange={(e) => {
+              setData({ ...data, place: e.target.value });
+            }}
+          />
         </label>
         <br></br>
         <label>
           Emailadres:
-          <input type="text" />
+          <input
+            type="text"
+            value={data.email}
+            onChange={(e) => {
+              setData({ ...data, email: e.target.value });
+            }}
+          />
         </label>
-        <button>klik hier</button>
+        <br></br>
       </form>
     </div>
   );

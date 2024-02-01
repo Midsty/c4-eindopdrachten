@@ -7,20 +7,28 @@ import Overzicht from "../components/Overzicht";
 import { useState, createContext } from "react";
 
 export const FormContext = createContext("FormContext");
+//  een component met daarin values
+const user = {
+  first: "",
+  last: "",
+  address: "",
+  housenumber: "",
+  zipcode: "",
+  place: "",
+  email: "",
+};
 
 export default function Persoon() {
+  const [data, setData] = useState(user);
 
-    const data  = useState();
   return (
     <div>
-        <FormContext.Provider  value={data}>
-            <Form name="Danny"/>
-             <Overzicht /> 
-        </FormContext.Provider>
+      {/* deze set data zodat we hem later kunnen ophalen */}
+      <FormContext.Provider value={{ data, setData }}>
+        {/* laat de 2 componenten zien op scherm */}
+        <Form name="A" />
+        <Overzicht />
+      </FormContext.Provider>
     </div>
   );
-
 }
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Persoon />);
