@@ -3,6 +3,7 @@ import "./App.css";
 
 import Home from "./routes/Home";
 import Persoon from "./routes/Persoon";
+import OpdrachtB  from "./routes/OpdrachtB";
 
 function App() {
   return (
@@ -15,12 +16,13 @@ function App() {
               <Link to="user/form">Inleveropdracht A </Link>
             </li>
             <li>
-              <Link to="/">Inleveropdracht B</Link>
+              <Link to="user/OpdrachtB">Inleveropdracht B</Link>
             </li>
         </nav>
         <Routes>
           <Route index element={<Home />} />
           <Route path="user/Form" element={<Persoon />} />
+          <Route path="user/OpdrachtB" element={<OpdrachtB/>} />
         </Routes>
       </BrowserRouter>
     </div>
