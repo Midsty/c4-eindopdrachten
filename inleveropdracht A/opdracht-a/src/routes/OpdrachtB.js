@@ -6,7 +6,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom/client';
 import { data } from './data.js';
-
+//dit is de goeie
 function OpdrachtB() {
   const [search, setSearch] = useState('');
 
